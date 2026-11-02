@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>redheartpink</title> <link  rel='stylesheet' href='style.css'>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        function loadHTML(url, elementId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+    </script>
+
+</head>
+
+<header>
+    <img class="logo" src="images/logo.png" alt="redheartpink">
+</header>
+
+<body class="container">
+
+    <main>
+
+<br>
+
+        <div style=" align-content: center; margin-left: auto; margin-right: auto; max-width: fit-content; padding-left: 50px; padding-right: 50px;"><p>
+        welcome to my personal site, below you can find links to my current social media
+        </p></div>
+<br>
+        
+            <div class="button">
+            <a href="https://heartpink.newgrounds.com"><img class="bimg" src="images/ng.png" alt="NG Logo">Newgrounds</a>
+            </div>
+        
+<br><br>
+        
+            <div class="button">
+            <a href="https://bsky.app/profile/redheartpink.com"><img class="bimg" src="images/bsky.png" alt="Bluesky Logo">Bluesky</a>
+            </div>
+        
+<br><br>
+
+        <body onload="loadHTML('blog.html', 'blog')"><div id="blog"></div>
+
+    </main>
+
+<br><br><br><br>
+
+    <div class="footer">
+        <img style="position: fixed; bottom: 5; left: 5; z-index:50;" src="images/hearttoheart.gif" alt="heart to heart">
+        <p>this website is human made &#60;3</p>
+    </div>
+    
+
+</body>
+</html>
